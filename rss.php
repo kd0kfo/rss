@@ -28,7 +28,7 @@ db_init();
 echo "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>";
 echo    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">' . "\n";
 echo 	"<channel>";
-echo '	<atom:link href="$feed_url" rel="self" type="application/rss+xml" />' . "\n";
+echo '	<atom:link href="' . $feed_url . '" rel="self" type="application/rss+xml" />' . "\n";
 echo     "<title>$title_string</title>
     <link>$base_url</link>
     <description>$description_feed</description>
@@ -45,8 +45,8 @@ while($junx = mysql_fetch_object($result))
   {
     echo '<item>' . "\n";
     echo '<title>' . $junx->title . '</title>' . "\n";
-    echo '<link>$base_url/index.php?id=' . (int) $junx->id . '</link>' . "\n";
-    echo '<guid isPermaLink="true">$base_url/index.php?id=' . (int) $junx->id . '</guid>' . "\n";
+    echo '<link>' . $base_url . '/index.php?id=' . (int) $junx->id . '</link>' . "\n";
+    echo '<guid isPermaLink="true">' . $base_url . '/index.php?id=' . (int) $junx->id . '</guid>' . "\n";
     echo '<description><![CDATA[';
 
     echo $junx->message . "<br>";

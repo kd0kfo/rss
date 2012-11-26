@@ -47,11 +47,11 @@ echo "<form action=\"edit.php\" method=\"post\">
  <table border=1 align=center>
   <tr>
    <td>Title:</td>
-   <td><input type=\"text\" name=\"title\" size=\"55\" maxlength=\"80\"></td>
+   <td><input type=\"text\" name=\"title\" size=\"55\" maxlength=\"256\"></td>
   </tr>
   <tr>
    <td>URL:</td>
-   <td><input type=\"text\" name=\"link\" size=\"55\"></td>
+   <td><input type=\"text\" name=\"link\" size=\"55\" maxlength=\"256\"></td>
   </tr>
   <tr>
    <td>Comment:</td>
