@@ -29,10 +29,10 @@ SQL Table Creation
 The following SQL statement may be used to create the table:
     CREATE TABLE `news` (
       `id` int(10) unsigned NOT NULL auto_increment,
-      `title` varchar(75) NOT NULL,
+      `title` varchar(256) NOT NULL,
       `message` text NOT NULL,
       `author` int(11) default NULL COMMENT 'optional index to user db',
-      `linkURL` varchar(75) default NULL,
+      `linkURL` varchar(256) default NULL,
       `lastUpdate` int(11) NOT NULL COMMENT 'unix timestamp',
       PRIMARY KEY  (`id`)
       ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
