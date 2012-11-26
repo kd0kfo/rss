@@ -43,38 +43,6 @@ $result = mysql_query($sql) or die("Insertion error: " . mysql_error());
 
 }
  
-/*
-$sql    = ("SELECT id, name, abbreviation, comment,url FROM journals");
-$result = mysql_query($sql) or die ("You are mean and make me sad!!!");
-$nrows  = mysql_num_rows($result);
-
-echo "
-<table border=1 align=\"center\">
- <tr>
-  <td>ID</td>
-  <td>Name</td>
-  <td>Abbr.</td>
-  <td>comment</td>
-  </tr>";
-
-for ($i = 0; $i < $nrows; $i++) {
- $row = mysql_fetch_array($result);
- if($i % 2) {
-  echo " <tr bgcolor=#ababe3 align=\"center\">\n";
- } else {
-  echo " <tr bgcolor=#ccccff align=\"center\">\n";
- }
- echo " 
-  <td><a href=\"edit_jour.php?ID=" . $row['id'] . "\">" . $row['id'] . "</td>
-  <td>"; if($row['url'] != ""){echo '<a href="' . $row['url'] . '">' . $row['name'] . '</a>';}else{echo $row['name'];} echo "</td>
-  <td>" . $row['abbreviation'] . "</td>
-  <td>" . $row['comment'] . "</td>
- </tr>";
-
-}*/
-
-
-
 echo "<form action=\"edit.php\" method=\"post\">
  <table border=1 align=center>
   <tr>
