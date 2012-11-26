@@ -23,6 +23,10 @@
 $outlook_url = "outlookfeed://example.com/RSS/rss.php";
 $base_url = "http://example.com/RSS";
 $feed_url = "http://example.com/RSS/rss.php";
+$title_string = "Example RSS Feed";
+$description_feed = "Descrption of RSS feed goes here.";
+$copyright_holder = "John Doe";
+$lastUpdate = "Thu, 20 Nov 2008 21:28:00 CST";
 $db;
 
 function db_init()
