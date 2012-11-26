@@ -20,9 +20,7 @@
    * <http://www.gnu.org/licenses/>.
    */
 
-
 require_once('./admin/talk_db.inc.php');
-
 
 db_init();
 
@@ -50,8 +48,13 @@ while($ids = mysql_fetch_object($newsItems))
 
 db_close();
 
-echo<<<EOF
-<p><a href="outlookfeed://hpcf.stjude.org/RSS/rss.php">Subscribe in Outlook</a></p>
-<p><a href="http://hpcf.stjude.org/RSS/rss.php">Feed URL<img src="http://hpcf.stjude.org/RSS/feed-icon-14x14.png" alt="" /></a></p>
-EOF;
+if(isset($outlook_url))
+  {
+    echo "<p><a href=\"$outlook_url\">Subscribe in Outlook</a></p>\n";
+  }
+if(isset($feed_url))
+  {
+    echo "<p><a href=\"$feed_url\">Feed URL<img src=\"$base_url/feed-icon-14x14.png\" alt=\"RSS Feed\" /></a></p>";
+  }
+
 ?>

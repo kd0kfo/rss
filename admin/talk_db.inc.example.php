@@ -20,6 +20,9 @@
    * <http://www.gnu.org/licenses/>.
    */
 
+$outlook_url = "outlookfeed://example.com/RSS/rss.php";
+$base_url = "http://example.com/RSS";
+$feed_url = "http://example.com/RSS/rss.php";
 $db;
 
 function db_init()
