@@ -60,16 +60,6 @@ function db_query($query)
 }
 
 /**
- * returns a boolean as to whether $value is in the $name column of $table
- */
-function db_contains($value,$name,$table)
-{
-  $numberOf = db_query("select * from " . $table ." where " . $name . " = '" . $value . "'");
-  
-  mysql_num_rows($numberOf) != 0;
-}
-
-/**
  * Creates a drop box with the given query results.
  * if ableToAdd is true, then there is an option (first) to add a new value.
  * The two fields required in the sql query are ID and showMe.

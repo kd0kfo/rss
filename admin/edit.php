@@ -24,7 +24,9 @@
    * <http://www.gnu.org/licenses/>.
    */
 
+echo "<p>Need to totally rewrite this code. It's terrible.</p>";
 
+/*
 
 include('talk_db.inc.php');
 
@@ -62,6 +64,7 @@ echo "<form action=\"edit.php\" method=\"post\">
   </tr>
  </table>
 </form>";
+*/
 ?>
 
 <p><a href="../index.php">Back</a></p>
